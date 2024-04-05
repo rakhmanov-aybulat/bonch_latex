@@ -1,0 +1,32 @@
+\documentclass[14pt]{extreport}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\setotherlanguages{english}
+\setmainfont{Tempora}
+\usepackage{setspace}
+\singlespacing
+\usepackage[margin=2cm]{geometry}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{color}
+
+\titleformat{\chapter}[display]
+{\centering \normalfont\large\bfseries}{}{20pt}{}
+\titlespacing*{\chapter}{0pt}{-50pt}{20pt}
+\titleformat{\section}{\normalfont\normalsize\bfseries}{\thesection}{1ex}{}
+
+\setlength{\parindent}{0pt}
+\setlength\parskip{\medskipamount}
+
+\begin{document}
+
+\include{title.tex}
+
+\renewcommand*\contentsname{\centering \normalsize Оглавление}
+\addtocontents{toc}{\vspace{-4ex}}
+\tableofcontents
+
+\input{content.tex}
+\end{document}
+
